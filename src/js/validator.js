@@ -9,9 +9,8 @@ export default class Validator {
     }
 
     const beginningEnd = /^[a-zA-Z][\w-]*[a-zA-Z]$/.test(this.name);
-    const onlyPermittedSymbols = !/[^\w-]/.test(this.name);
     const maxTwoDigits = !/[\d]{3}/.test(this.name);
 
-    return (beginningEnd && onlyPermittedSymbols && maxTwoDigits);
+    return (beginningEnd && maxTwoDigits);
   }
 }
